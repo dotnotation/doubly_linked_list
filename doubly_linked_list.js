@@ -107,4 +107,16 @@ class DoublyLinkedList{
         }
         return current
     }
+
+    set(idx, val){
+        // replace the value of a node at an index
+        let foundNode = this.get(idx)
+
+        if (!foundNode){
+            return false 
+        } else {
+            foundNode.val = val
+        }
+        return true
+    }
 }
