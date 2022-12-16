@@ -142,9 +142,10 @@ class DoublyLinkedList{
         if (idx === 0) return this.shift()
 
         let foundNode = this.get(idx)
-        let prevNode = foundNode.prev 
-        prevNode.next = foundNode.next
-        foundNode
+        foundNode.prev.next = foundNode.next 
+        foundNode.next.prev = foundNode.prev
+        foundNode.next = null
+        foundNode.prev = null
         this.length--
         return foundNode
     }
