@@ -34,4 +34,22 @@ class DoublyLinkedList{
         this.length++
         return this
     }
+
+    pop(){
+        // remove last time and return it
+        if (!this.head) return undefined
+
+        let current = this.tail 
+
+        if (this.length === 1){
+            this.head = null
+            this.tail = null
+        } else {
+            this.tail = current.prev 
+            this.tail.next = null
+            current.prev = null
+        }
+        length--
+        return current
+    }
 }
