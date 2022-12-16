@@ -150,3 +150,10 @@ class DoublyLinkedList{
         return foundNode
     }
 }
+
+// Big O
+    // Insertion O(1)
+    // Removal O(1) which is better than singly
+    // Searching O(n)
+    // Access O(n)
+    

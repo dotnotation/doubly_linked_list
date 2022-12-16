@@ -8,3 +8,9 @@ What is a doubly linked list?
 - it is more flexible than a singly linked list, but it costs more memory
 - no index, just pointers to the previous and next element
 - when initializing a new node, you have a property of this.prev
+
+- Big O
+    - Insertion O(1)
+    - Removal O(1) which is better than singly
+    - Searching O(n)
+    - Access O(n)
