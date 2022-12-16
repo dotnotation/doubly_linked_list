@@ -23,15 +23,14 @@ class DoublyLinkedList{
 
         let newNode = new Node(val)
 
-        if (!head){
+        if (this.length === 0){
             this.head = newNode
             this.tail = newNode
+        } else {
+            this.tail.next = newNode 
+            newNode.prev = this.tail
+            this.tail = newNode 
         }
-
-        let oldTail = this.tail
-        oldTail.next = newNode 
-        newNode.prev = oldTail 
-        this.tail = newNode 
         this.length++
         return this
     }
