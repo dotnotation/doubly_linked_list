@@ -135,4 +135,17 @@ class DoublyLinkedList{
         this.length++
         return true
     }
+
+    remove(idx){
+        if (idx < 0 || idx >= this.length) return undefined
+        if (idx === this.length - 1) return this.pop()
+        if (idx === 0) return this.shift()
+
+        let foundNode = this.get(idx)
+        let prevNode = foundNode.prev 
+        prevNode.next = foundNode.next
+        foundNode
+        this.length--
+        return foundNode
+    }
 }
