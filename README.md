@@ -7,3 +7,4 @@ What is a doubly linked list?
 - it is a singly linked list but adding a pointer to prev node and next node
 - it is more flexible than a singly linked list, but it costs more memory
 - no index, just pointers to the previous and next element
+- when initializing a new node, you have a property of this.prev
