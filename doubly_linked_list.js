@@ -119,4 +119,19 @@ class DoublyLinkedList{
         }
         return true
     }
+
+    insert(idx, val){
+        // adding a node at a specific position
+        if (idx < 0 || idx >= this.length) return false 
+        if (idx === 0) return !!this.unshift(val)
+        if (idx === this.length) return !!this.push(val)
+
+        let newNode = new Node(val)
+        let prevNode = this.get(idx - 1)
+        let temp = prevNode.next 
+        prevNode.next = newNode 
+        newNode.next = temp 
+        this.length++
+        return true
+    }
 }
