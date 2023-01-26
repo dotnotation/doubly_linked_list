@@ -149,6 +149,23 @@ class DoublyLinkedList{
         this.length--
         return foundNode
     }
+
+    reverse(){
+        let current = this.head 
+        this.head = this.tail 
+        this.tail = current 
+        let prevNode = null
+        let nextNode = null 
+    
+        for (let i = 0; i < this.length; i++){
+            nextNode = current.next 
+            current.next = prevNode
+            prevNode = current 
+            current = nextNode
+        }
+    
+        return this
+    }
 }
 
 // Big O
